@@ -2,7 +2,7 @@ import styles from './GetOTP.module.css'
 import Utilities from '../Utilities/Utilities'
 
 export default function GetOTP() {
-    let utilities = new Utilities()
+    
     return <div className={`${styles.getOTP}`}>
         <div className={`${styles.getOTP__title} vibeTitle`}>
             VIBE
@@ -15,10 +15,10 @@ export default function GetOTP() {
                 Enter your OTP here
             </div>
             <div className={`${styles.getOTP__inputSquares} inter500`}>
-                {utilities.InputSquare()}
-                {utilities.InputSquare()}
-                {utilities.InputSquare()}
-                {utilities.InputSquare()}
+                {Utilities.InputSquare()}
+                {Utilities.InputSquare()}
+                {Utilities.InputSquare()}
+                {Utilities.InputSquare()}
             </div>
             <div className={`${styles.getOTP__nextButton} inter500 button blackButton`}>
                 Next
