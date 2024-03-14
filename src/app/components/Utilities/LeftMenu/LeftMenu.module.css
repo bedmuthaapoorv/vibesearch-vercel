@@ -1,0 +1,58 @@
+
+.menu {
+    width: 80vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+    left:0vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__section {
+    border-top: 1px;
+    border-style: solid;
+    border-color: #49454F;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+}
+.section__title{
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+}
+.menu__account{
+    height: 5vh;
+    width: 80vw;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+.account__image{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+}
+
+.menu__accountContainer{
+    background-color: #1E1E1E;
+    height: 8.3vh;
+    width: 80vw;
+    display: flex;
+    color: white;    
+    justify-content: center;
+    align-items: center;
+}
+.menu__historyContainer{
+    height:85vh;
+    overflow-y: scroll;
+}
