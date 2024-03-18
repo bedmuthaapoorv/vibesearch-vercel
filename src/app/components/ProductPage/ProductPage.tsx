@@ -1,3 +1,4 @@
+"use client"
 import Resources from '@/app/resources/resources'
 import styles from './ProductPage.module.css'
 import Link from 'next/link'
