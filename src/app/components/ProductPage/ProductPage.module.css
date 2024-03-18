@@ -2,8 +2,8 @@
     height: 70vh;
     background-color: white;
     border-radius: 24px;
-    position: absolute;
-    top: 30vh;
+    /* position: absolute; */
+    /* top: 30vh; */
     z-index: 3;
     width: 100vw;
     display: flex;
@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 80vw;
+    width: 100vw;
 }
 .header__searchQuery{
     width: 60vw;

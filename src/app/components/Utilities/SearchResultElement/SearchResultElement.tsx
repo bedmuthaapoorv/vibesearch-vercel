@@ -12,14 +12,14 @@ export default function SearchResultElement(name: any, price: any, ratings: any,
                 <div className={`${styles.productInfo__price}`}>
                     $ {price}
                 </div>
-                <div className={`${styles.productInfo__review}`}>
+                {/* <div className={`${styles.productInfo__review}`}>
                     <div className={`${styles.review__ratings}`}>
                         &#11088; {ratings}
                     </div>
                     <div className={`${styles.review__totalReviews}`}>
                         {noOfReviews} Reviews
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

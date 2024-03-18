@@ -73,3 +73,14 @@ body {
   color: white;
   border-radius: 8px;
 }
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+input{
+  appearance: none;
+  border: none;
+  background-color: inherit;
+  outline: none;
+}

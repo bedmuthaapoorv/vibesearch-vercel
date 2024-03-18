@@ -3,8 +3,12 @@ import styles from './ProductPage.module.css'
 import Link from 'next/link'
 import services from '@/app/services/services'
 import { access } from 'fs'
-export default function ProductPage(query: string, image: any, name: String, price: any, url:any, setShowDetails:any, id:any, access_token:any) {
+import { motion } from 'framer-motion'
+export default function ProductPage(query: string, image: any, name: String, price: any, url:any, setShowDetails:any, id:any, access_token:any, showDetails:any) {
     return (
+        <motion.div animate={{
+            y:showDetails? 250 :800
+        }}>
         <div className={`${styles.productPage}`}>
             <div className={`${styles.productPage__header}`}>
                 <img className={`${styles.header__backArrow}`} src={Resources.backArrow.src} onClick={
@@ -39,5 +43,6 @@ export default function ProductPage(query: string, image: any, name: String, pri
                 }}></img>
             </div>
         </div>
+        </motion.div>
     )
 }

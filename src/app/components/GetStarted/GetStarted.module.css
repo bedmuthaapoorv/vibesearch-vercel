@@ -47,3 +47,10 @@
     width: 60vw;
     text-align: center;
 }
+
+.getStarted__googleSignIn{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}

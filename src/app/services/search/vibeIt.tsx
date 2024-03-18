@@ -1,6 +1,6 @@
 import Resources from "@/app/resources/resources";
 import axios from "axios";
-export default async function vibeIt(mainQuery: string | null, secondaryQuery: string, currentPage: string, result_count: string, setState: any, access_token: string|null) {
+export default async function vibeIt(mainQuery: string | null, secondaryQuery: string | null, currentPage: string, result_count: string, setState: any, access_token: string|null) {
     let data={
         "query": {
             "mainquery": mainQuery,

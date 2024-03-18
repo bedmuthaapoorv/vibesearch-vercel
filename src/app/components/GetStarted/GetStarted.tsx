@@ -20,9 +20,16 @@ export default function GetStarted() {
         <div className={`${styles.getStarted__image}`}>
             <img src={Resources.getStartedImage.src} alt="getStarted image"></img>
         </div>
-        <div onClick={async () => await services.googleSignIn()}>
-            <img className={`${styles.signup__googleSignIn}`} src={Resources.googleSignInButton.src} >
+        <div className={`${styles.getStarted__googleSignIn}`} onClick={async () => await services.googleSignIn()}>
+            <img className={`${styles.googleSignIn__googleSignInImage}`} src={Resources.googleSignInButton.src} >
             </img>
+        </div>
+        <div className={`${styles.getStarted__googleSignIn}`}>
+            <Link href={'/components/HomeScreen'}>
+            <div className={`${styles.getStarted__guestLoginButton} inter500 fontSize14 button ${styles.getStartedbuttons}`}>
+                Login as Guest
+            </div>
+            </Link>
         </div>
         <div className={`${styles.getStarted__buttonsFlex}`}>
             <Link href={'/components/LogIn'}>

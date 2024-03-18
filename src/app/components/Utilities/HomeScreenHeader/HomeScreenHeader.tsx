@@ -6,14 +6,14 @@ import Link from 'next/link';
 export default function HomeScreenHeader(setOpenMenu: any) {
 
     return (
-        <Link href={'/components/HomeScreen'}>
-            <div className={`${styles.homescreen__header}`}>
-                <img className={`${styles.header__menuSandwichIcon}`} src={Resources.menuSandwichIcon.src} onClick={
-                    () => setOpenMenu('true')
-                }></img>
+        <div className={`${styles.homescreen__header}`}>
+            <img className={`${styles.header__menuSandwichIcon}`} src={Resources.menuSandwichIcon.src} onClick={
+                () => setOpenMenu('true')
+            }></img>
+            <Link href={'/components/HomeScreen'}>
                 <Utilities.VibeLogo></Utilities.VibeLogo>
-                <img className={`${styles.header__newSearch}`} src={Resources.newSearchIcon.src}></img>
-            </div>
-        </Link>
+            </Link>
+            <img className={`${styles.header__newSearch}`} src={Resources.newSearchIcon.src}></img>
+        </div>
     )
 }
