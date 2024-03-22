@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation';
 export default function SearchBox() {
     // let ref=useRef()
-    let [file, setFile] = useState(null)
+    let [file, setFile] = useState<any>(null)
     let fileInputElement: any = null
     let [searchQuery, setSearchQuery] = useState<string>("")
     const router = useRouter();
@@ -31,9 +31,9 @@ export default function SearchBox() {
                     reader.onload = (event: any) => {
                         const base64String:any = event.target.result as string;
                         //console.log(base64String);
-                        setFile(base64String)
+                        setFile(base64String.split(',')[1])
                         // You can do whatever you want with the base64String here
-                        localStorage.setItem('image-file', base64String);
+                        localStorage.setItem('image-file', base64String.split(',')[1]);
                     };
                     reader.readAsDataURL(file);
                 }

@@ -8,6 +8,7 @@ import removeFromWishlist from "./WishList/removeFromWishlist";
 import getUserDetails from "./authentication/getUserDetails";
 import getAccessToken from "./authentication/getAccessToken";
 import logOut from "./authentication/logOut";
+import isMobile from "./deviceInfo/isMobile";
 const services={
     googleSignIn:googleSignIn,
     passwordSignIn: passwordSignIn,
@@ -18,7 +19,8 @@ const services={
     removeFromWishlist:removeFromWishlist,
     getUserDetails:getUserDetails,
     getAccessToken: getAccessToken,
-    logOut:logOut
+    logOut:logOut,
+    isMobile:isMobile
 }
 
 export default services

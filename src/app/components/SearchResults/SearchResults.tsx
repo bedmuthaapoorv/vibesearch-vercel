@@ -29,9 +29,10 @@ export default function SearchResults() {
     useEffect(() => {
         services.getAccessToken(setAccessData);
         setSecondQuery(localStorage.getItem('image-file'))
-        localStorage.removeItem('image-file')
+        //localStorage.removeItem('image-file')
     }, []); // Empty dependency array means this effect runs once on mount.
 
+    //console.log("coole: "+secondQuery)
     // Call vibeIt when temp, currentPage, or accessData changes
     useEffect(() => {
         if(accessData && accessData["data"] && accessData["data"]["session"]) { // Make sure accessData is not null before calling vibeIt

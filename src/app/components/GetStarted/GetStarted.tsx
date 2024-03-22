@@ -11,7 +11,8 @@ export default function GetStarted() {
     let [userDetails, setUserDetails]=useState({})
     useEffect(() => {
         services.getUserDetails(setUserDetails)
-    })
+        services.isMobile()
+    }, [])
     return <div className={`${styles.getStarted}`}>
         {/* {JSON.stringify(userDetails)} */}
         <div className={`${styles.getStarted__title} vibeTitle`}>
