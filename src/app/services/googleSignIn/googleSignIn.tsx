@@ -9,7 +9,7 @@ export default async function googleSignIn(){
     await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: 'http://localhost:3000/components/HomeScreen',
+          redirectTo: 'https://vibesearch-vercel.vercel.app/components/HomeScreen',
           queryParams: {
             access_type: 'offline',
             prompt:'select_account',
