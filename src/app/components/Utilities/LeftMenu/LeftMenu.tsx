@@ -20,44 +20,18 @@ export default function LeftMenu(openMenu: boolean) {
     }, [])
     //console.log(userDetails)
 
-
+    console.log(openMenu)
     return (
-        <motion.div initial={{ x: '-140vw' }} animate={{ x: openMenu? 0 :-400, y: -555 }}>
+        <motion.div initial={{x: -308}} animate={{ x: openMenu? 0: -308, y: 0 }}>
             <div className={`${styles.menu}`}>
-                <div className={`${styles.menu__section}`}>
-                    <Link href={'SearchResults?query=wishlist'}>{Utilities.MenuSectionElement(Resources.savedItems.src, 'Saved Items', 'View')}</Link>
-                </div>
                 <div className={`${styles.menu__historyContainer}`}>
-                    {/* <div className={`${styles.menu__section}`}>
-                    <div className={`${styles.section__title} montserrat fontWeight600`}>Connect</div>
-                    {Utilities.MenuSectionElement(Resources.savedItems.src, 'Saved Items', 'View')}
-                    {Utilities.MenuSectionElement(Resources.savedItems.src, 'Saved Items', 'View')}
-                    {Utilities.MenuSectionElement(Resources.savedItems.src, 'Saved Items', 'View')}
-                </div>
-                <div className={`${styles.menu__section}`}>
-                    <div className={`${styles.section__title} montserrat fontWeight600`}>Yesterday</div>
-                    {Utilities.HistoryElement('DC comic dress')}
-                    {Utilities.HistoryElement('DC comic dress')}
-                    {Utilities.HistoryElement('DC comic dress')}
-                </div>
-                <div className={`${styles.menu__section}`}>
-                    <div className={`${styles.section__title} montserrat fontWeight600`}>Yesterday</div>
-                    {Utilities.HistoryElement('DC comic dress')}
-                    {Utilities.HistoryElement('DC comic dress')}
-                    {Utilities.HistoryElement('DC comic dress')}
-                </div>
-                <div className={`${styles.menu__section}`}>
-                    <div className={`${styles.section__title} montserrat fontWeight600`}>Yesterday</div>
-                    {Utilities.HistoryElement('DC comic dress')}
-                    {Utilities.HistoryElement('DC comic dress')}
-                    {Utilities.HistoryElement('DC comic dress')}
-                </div> */}
+                    
                 </div>
                 <div className={`${styles.menu__accountContainer}`}>
                     <div className={`${styles.menu__account}`}>
                         <img className={`${styles.account__image}`} src={userDetails["data"]["user"] ? userDetails["data"]["user"]["user_metadata"]["picture"] : Resources.savedItems.src}></img>
                         <div className={`${styles.account__name}`}>{userDetails["data"]["user"] ? userDetails["data"]["user"]["user_metadata"]["full_name"] : "Guest Mode"}</div>
-                        <div className={`${styles.account__logout}`}>{!userDetails["data"]["user"] ? <Link href={"/components/GetStarted"}>Log in</Link> : <Link href={'/components/HomeScreen'}><div onClick={() => services.logOut()}>Log Out</div></Link>}</div>
+                        <div className={`${styles.account__logout}`}>{!userDetails["data"]["user"] ? <Link href={"/components/GetStarted"}>Log in</Link> : <Link href={'/components/GetStarted'}><div onClick={() => services.logOut()}>Log Out</div></Link>}</div>
                     </div>
                 </div>
             </div>

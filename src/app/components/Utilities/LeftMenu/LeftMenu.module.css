@@ -1,11 +1,10 @@
 
 .menu {
-    width: 80vw;
-    height: 100vh;
+    width: 308px;
+    height: 800px;
     background-color: white;
     z-index: 1;
-    /* position: absolute;
-    left:0vw; */
+    position: absolute;
     display: flex;
     flex-direction: column;
 }
@@ -20,39 +19,44 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80vw;
+    width: 308px;
 }
 .section__title{
     height: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70vw;
+    width: 308px;
 }
 .menu__account{
-    height: 5vh;
-    width: 80vw;
+    height: 40px;
+    width: 292px;
     display: flex;
     color: white;
     justify-content: space-around;
     align-items: center;
 }
 .account__image{
-    width: 10vw;
-    height: 10vw;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
-
+.account__name{
+    width: 148px;
+    font-size: 16px;
+    white-space: pre;
+}
 .menu__accountContainer{
     background-color: #1E1E1E;
-    height: 8.3vh;
-    width: 80vw;
+    height: 68px;
+    width: 308px;
     display: flex;
     color: white;    
     justify-content: center;
     align-items: center;
 }
 .menu__historyContainer{
-    height:85vh;
+    height: 800px;
+    width: 308px;
     overflow-y: scroll;
 }

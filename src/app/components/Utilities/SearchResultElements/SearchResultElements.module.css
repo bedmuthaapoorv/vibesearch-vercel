@@ -3,3 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+.productWrapper:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}

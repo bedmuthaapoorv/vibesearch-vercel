@@ -8,10 +8,13 @@ export default function SearchResultElements(results: any, setShowDetails: any, 
     for (let result of keys) {
         let product = results[result]
         response.push(
-            <div onClick={() => {
+            <div 
+            className={styles.productWrapper}
+            onClick={() => {
                 setProductDetails(product)
                 setShowDetails(true)
             }
+            
             } key={result}>
                 {product!=null? Utilities.SearchResultElement(product["product_title"], product["price"], 0, 0, product["image"]):<></>}
             </div>

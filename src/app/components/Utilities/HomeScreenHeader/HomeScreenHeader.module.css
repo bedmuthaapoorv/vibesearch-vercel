@@ -1,14 +1,14 @@
 .homescreen__header {
     display: flex;
-    width: 90vw;
+    width: 360px;
     justify-content: space-between;
     align-items: center;
 }
 
 .header__menuSandwichIcon {
-    height: 2.5vh;
+    height: 21px;
 }
 
 .header__newSearch {
-    height: 2.8vh;
+    height: 24px;
 }

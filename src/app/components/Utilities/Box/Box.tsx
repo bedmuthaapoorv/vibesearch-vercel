@@ -5,7 +5,7 @@ export default function Box(image:any, text:string) {
             <img className={`${styles.box__boxImage}`} src={image.src}>
             </img>
             <div className={`${styles.box__boxText} inter fontWeight500`}>
-                {text}
+               <p> {text}</p>
             </div>
         </div>
     )

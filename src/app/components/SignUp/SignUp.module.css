@@ -6,6 +6,11 @@
     height: 98vh;
     width: 100vw;
 }
+.Signup__back__image{
+    position: relative;
+    right: 38%;
+    top: 5%;
+}
 .signup__title{
     width: 79vw;
     display: flex;

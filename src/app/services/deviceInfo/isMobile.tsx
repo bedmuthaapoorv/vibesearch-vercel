@@ -23,9 +23,5 @@ export default function isMobile() {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
-    if (isMobile.any()) alert('Mobile');
-
-    return (
-        <></>
-    )
+    return isMobile.any();
 }

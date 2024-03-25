@@ -11,6 +11,14 @@
     display: flex;
     justify-content: flex-start;
 }
+.back__image{
+    height: 44px;
+    width: 44px;
+    position: relative;
+    right: 38%;
+    top: 10%;
+    
+}
 .title__content{
     font-size: 24px;
 }

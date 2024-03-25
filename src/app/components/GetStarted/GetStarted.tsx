@@ -8,41 +8,32 @@ import Link from "next/link"
 
 export default function GetStarted() {
     
-    let [userDetails, setUserDetails]=useState({})
+    let [userDetails, setUserDetails]=useState<any>({})
+    let [isMobile, setIsMobile]=useState<any>(false)
     useEffect(() => {
         services.getUserDetails(setUserDetails)
-        services.isMobile()
+        setIsMobile(services.isMobile())
     }, [])
-    return <div className={`${styles.getStarted}`}>
+    return <div className={`${styles.getStarted}`} >
         {/* {JSON.stringify(userDetails)} */}
         <div className={`${styles.getStarted__title} vibeTitle`}>
             VIBE
         </div>
         <div className={`${styles.getStarted__image}`}>
-            <img src={Resources.getStartedImage.src} alt="getStarted image"></img>
+            <img src={Resources.getStartedImage.src} alt="getStarted image" className={`${styles.image__component}`}></img>
         </div>
-        <div className={`${styles.getStarted__googleSignIn}`} onClick={async () => await services.googleSignIn()}>
-            <img className={`${styles.googleSignIn__googleSignInImage}`} src={Resources.googleSignInButton.src} >
-            </img>
-        </div>
-        <div className={`${styles.getStarted__googleSignIn}`}>
-            <Link href={'/components/HomeScreen'}>
-            <div className={`${styles.getStarted__guestLoginButton} inter500 fontSize14 button ${styles.getStartedbuttons}`}>
-                Login as Guest
+        <div className={`${styles.getStarted__buttons}`}>
+            <div className={`${styles.getStarted__googleSignIn}`} onClick={async () => await services.googleSignIn()}>
+                <img className={`${styles.googleSignIn__googleSignInImage}`} src={Resources.googleSignInButton.src} >
+                </img>
             </div>
-            </Link>
-        </div>
-        <div className={`${styles.getStarted__buttonsFlex}`}>
-            <Link href={'/components/LogIn'}>
-                <div className={`${styles.getStarted__loginButton} inter500 fontSize14 button ${styles.getStartedbuttons}`}>
-                    Login
+            <div className={`${styles.getStarted__googleSignIn}`}>
+                <Link href={'/components/HomeScreen'}>
+                <div className={`${styles.getStarted__guestLoginButton} inter500 fontSize14`}>
+                    Guest Mode
                 </div>
-            </Link>
-            <Link href={'/components/SignUp'}>
-                <div className={`${styles.getStarted__getStartedButton} inter500 fontSize14 button ${styles.getStartedbuttons}`}>
-                    Sign Up
-                </div>
-            </Link>
+                </Link>
+            </div>
         </div>
         <div className={`${styles.getStarted__termsAndConditions} inter500`}>
             <div className={`${styles.termsAndConditions__content}`}>

@@ -8,11 +8,8 @@ export default function HomeScreenHeader(setOpenMenu: any) {
     return (
         <div className={`${styles.homescreen__header}`}>
             <img className={`${styles.header__menuSandwichIcon}`} src={Resources.menuSandwichIcon.src} onClick={
-                () => setOpenMenu('true')
+                () => setOpenMenu(true)
             }></img>
-            <Link href={'/components/HomeScreen'}>
-                <Utilities.VibeLogo></Utilities.VibeLogo>
-            </Link>
             <img className={`${styles.header__newSearch}`} src={Resources.newSearchIcon.src}></img>
         </div>
     )

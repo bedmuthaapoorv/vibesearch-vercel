@@ -2,14 +2,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 98vh;
+    align-items: center;
+    height: 800px;
+    width: 430px;
+    background-color: white;
 }
 .getStarted__title{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.image__component{
+    max-height: 430px;
+    max-width: 430px;
+}
 .getStarted__image{
     display: flex;
     justify-content: center;
@@ -20,10 +26,15 @@
     display: flex;
     justify-content: space-around;
 }
-
+.getStarted__buttons{
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .getStartedbuttons {
-    width: 42vw;
-    height: 6.1vh;
+    width: 254px;
+    height: 40px;
 }
 
 .getStarted__loginButton {
@@ -40,6 +51,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 193px;
+    max-height: 34px;
 }
 .termsAndConditions__content{
     font-size: 11px;
@@ -50,7 +63,11 @@
 
 .getStarted__googleSignIn{
     display: flex;
-    width: 100vw;
+    max-width: 430px;
     align-items: center;
     justify-content: center;
+}
+.googleSignIn__googleSignInImage{
+    max-width: 261px;
+    max-height: 53px;
 }
