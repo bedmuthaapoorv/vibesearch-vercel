@@ -4,7 +4,7 @@ import styles from './GetStarted.module.css'
 import services from "@/app/services/services"
 import { useEffect, useState } from "react"
 import Link from "next/link"
-
+import Utilities from "../Utilities/Utilities"
 
 export default function GetStarted() {
     
@@ -16,9 +16,7 @@ export default function GetStarted() {
     }, [])
     return <div className={`${styles.getStarted}`} >
         {/* {JSON.stringify(userDetails)} */}
-        <div className={`${styles.getStarted__title} vibeTitle`}>
-            VIBE
-        </div>
+        <Utilities.VibeLogo></Utilities.VibeLogo>
         <div className={`${styles.getStarted__image}`}>
             <img src={Resources.getStartedImage.src} alt="getStarted image" className={`${styles.image__component}`}></img>
         </div>
@@ -29,15 +27,17 @@ export default function GetStarted() {
             </div>
             <div className={`${styles.getStarted__googleSignIn}`}>
                 <Link href={'/components/HomeScreen'}>
-                <div className={`${styles.getStarted__guestLoginButton} inter500 fontSize14`}>
-                    Guest Mode
+                <div className={`${styles.getStarted__guestLoginButton} cabin`}>
+                    Guest mode
                 </div>
                 </Link>
             </div>
         </div>
         <div className={`${styles.getStarted__termsAndConditions} inter500`}>
             <div className={`${styles.termsAndConditions__content}`}>
-                By using Vibe, you accept our Terms of Service & Privacy Policy
+                By using Vibe, you accept our 
+                <Link href={"https://www.hush1one.com/legal/termsofuse"}> <span className="underline">Terms of Service</span></Link> & 
+                <Link href={"https://www.hush1one.com/legal/privacypolicy"}> <span className="underline">Privacy Policy</span></Link>
             </div>
         </div>
     </div>
